@@ -35,9 +35,29 @@ function logger(a) {
 // logger(45)
 var nums = [1, 2, 3, 4, 5, 6];
 nums.map(function (num) { return num.toFixed(); });
-// producedYear - required
-// producedYear? - not required
-var logCar = function (car) {
-    return "Name of car ".concat(car.name, ", color ").concat(car.color, ", produced in ").concat(car.producedYear);
+/*
+interface ICar {
+    name: string,
+    color: string,
+    producedYear?: number
+}
+
+interface IBmw extends ICar {
+    extraBallon: boolean,
+    peopleAmunt?: number
+}
+
+const logCar = (car: ICar) => {
+    return `Name of car ${car.name}, color ${car.color}, produced in ${car.producedYear}`
+}
+ */
+var bmwCar = function (bmw) {
+    return "Name of car ".concat(bmw.name, ", color ").concat(bmw.color, ", produced in ").concat(bmw.producedYear, ", has extra ballon: ").concat(bmw.extraBallon, ", people amount on salon: ").concat(bmw.peopleAmunt);
 };
-console.log(logCar({ name: 'BMW', color: 'black', producedYear: 2020 }));
+var logPoint = function (point) {
+    var d3 = point;
+};
+// Literal type
+var car = 'bmw';
+car = 'mercedes';
+console.log(car);

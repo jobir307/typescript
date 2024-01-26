@@ -58,6 +58,24 @@ var logPoint = function (point) {
     var d3 = point;
 };
 // Literal type
-var car = 'bmw';
-car = 'mercedes';
-console.log(car);
+var car = 'mers';
+car = "mers";
+var div = document.getElementById('div');
+function actionLogger(action) {
+    switch (action) {
+        case 'show':
+            return true;
+        case 'hide':
+            return false;
+    }
+}
+// ENUM
+var Dictionary;
+(function (Dictionary) {
+    Dictionary[Dictionary["uz"] = 0] = "uz";
+    Dictionary[Dictionary["ru"] = 1] = "ru";
+    Dictionary[Dictionary["en"] = 2] = "en";
+})(Dictionary || (Dictionary = {}));
+var uzbIndex = Dictionary.uz;
+var uzb = Dictionary[uzbIndex];
+console.log(uzb);

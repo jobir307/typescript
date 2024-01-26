@@ -125,17 +125,43 @@ let car: 'mers' = 'mers'
 car = "mers"
 // console.log(car);
 
-
 type actionType = 'show' | 'hide'
 const div = document.getElementById('div') as HTMLDivElement
-function logger(action: actionType): string {
+
+function actionLogger(action: actionType): boolean {
     switch (action) {
         case 'show':
-            return;
-            break;
-    
+            return true;
         case 'hide':
-            return
-            break;
+            return false;
+    }
+}
+
+
+// ENUM
+enum Dictionary {
+    uz, ru, en
+}
+
+const uzbIndex = Dictionary.uz
+const uzb = Dictionary[uzbIndex]
+console.log(uzb);
+
+
+enum Numbers {
+    One,
+    Two,
+    Three,
+    Four
+}
+
+function getUzb(number: Numbers): string {
+    switch (number) {
+        case Numbers.One:
+            return "Bir"
+        case Numbers.Two:
+            return "Ikki"
+        case  Numbers.Three:
+            return "Uch"
     }
 }
